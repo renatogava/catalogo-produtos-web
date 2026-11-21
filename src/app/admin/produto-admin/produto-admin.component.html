@@ -1,1 +1,14 @@
-<p>produto-admin works!</p>
+<form (ngSubmit)="salvar()">
+    <label for="nome">Nome:</label>
+    <input type="text" [(ngModel)]="produto.nome" name="nome">
+    <label for="preco">Preço:</label>
+    <input type="number" [(ngModel)]="produto.preco" name="preco">
+    <label for="categoria">Categoria:</label>
+    <input type="text" [(ngModel)]="produto.categoria" name="categoria">
+    <label for="imagemUrl">URL da Imagem:</label>
+    <input type="text" [(ngModel)]="produto.imagemUrl" name="imagemUrl">
+    <label for="disponivel">Disponível:</label>
+    <input type="checkbox" [(ngModel)]="produto.disponivel" name="disponivel">
+    <button type="submit">Salvar</button>
+    <button type="button" (click)="cancelar()">Cancelar</button>
+</form>

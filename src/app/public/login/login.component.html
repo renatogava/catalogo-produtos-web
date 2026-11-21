@@ -1,1 +1,9 @@
-<p>login works!</p>
+<form (ngSubmit)="entrar()">
+
+    <input type="text" [(ngModel)]="usuario" name="usuario">
+    <input type="password" [(ngModel)]="senha" name="senha">
+    <button type="submit">Entrar</button>
+    @if (erro) {
+        <p>{{ erro }}</p>
+    }
+</form>

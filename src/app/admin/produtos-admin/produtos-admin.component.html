@@ -1,1 +1,14 @@
-<p>produtos-admin works!</p>
+<button (click)="novo()">Novo Produto</button>
+<table>
+    @for (produto of produtos(); track produto.id) {
+      <tr>
+        <td><img [src]="produto.imagemUrl" [alt]="produto.nome" width="48"></td>
+        <td>{{ produto.nome }}</td>
+        <td>{{ produto.preco | currency:'BRL' }}</td>
+        <td>
+          <button (click)="editar(produto.id!)">Editar</button>
+          <button (click)="remover(produto.id!)">Remover</button>
+        </td>
+      </tr>
+    }
+</table>
