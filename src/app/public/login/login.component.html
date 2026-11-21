@@ -1,9 +1,23 @@
-<form (ngSubmit)="entrar()">
+<section class="login-page container">
+    <div class="login-card">
+        <div class="login-brand-mark" aria-hidden="true">C</div>
+        <p class="eyebrow">ÁREA RESTRITA</p>
+        <h1>Boas-vindas</h1>
+        <p class="login-description">Entre para acessar a administração do catálogo.</p>
 
-    <input type="text" [(ngModel)]="usuario" name="usuario">
-    <input type="password" [(ngModel)]="senha" name="senha">
-    <button type="submit">Entrar</button>
-    @if (erro) {
-        <p>{{ erro }}</p>
-    }
-</form>
+        <form class="login-form" (ngSubmit)="entrar()">
+            <div class="mb-3">
+                <label class="form-label" for="usuario">Usuário</label>
+                <input class="form-control" id="usuario" type="text" [(ngModel)]="usuario" name="usuario" autocomplete="username">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="senha">Senha</label>
+                <input class="form-control" id="senha" type="password" [(ngModel)]="senha" name="senha" autocomplete="current-password">
+            </div>
+            @if (erro) {
+                <p class="alert alert-danger login-error" role="alert">{{ erro }}</p>
+            }
+            <button class="btn btn-primary login-submit" type="submit">Entrar</button>
+        </form>
+    </div>
+</section>

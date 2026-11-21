@@ -1,0 +1,100 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1;
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgba(11, 16, 23, 0.88);
+  backdrop-filter: blur(16px);
+}
+
+.site-navbar {
+  min-height: 4.5rem;
+  padding-block: 0.75rem;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.15rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark:hover {
+  color: var(--text-main);
+}
+
+.brand-icon {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 0.7rem;
+  background: var(--accent);
+  color: #0b201f;
+  font-size: 1rem;
+  font-weight: 850;
+}
+
+.brand-accent {
+  color: var(--accent);
+}
+
+.site-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.site-nav-links .nav-link {
+  padding: 0.55rem 0.8rem;
+  border-radius: 0.65rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+
+.site-nav-links .nav-link:hover,
+.site-nav-links .nav-link:focus-visible {
+  background: rgba(182, 203, 224, 0.08);
+  color: var(--text-main);
+}
+
+.site-nav-links .nav-link-admin {
+  margin-left: 0.35rem;
+  border: 1px solid var(--border-subtle);
+  color: var(--accent);
+}
+
+.app-main {
+  flex: 1;
+}
+
+@media (max-width: 575.98px) {
+  .site-navbar > .container {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .site-nav-links {
+    width: 100%;
+    gap: 0.15rem;
+  }
+
+  .site-nav-links .nav-link {
+    padding: 0.45rem 0.65rem;
+    font-size: 0.84rem;
+  }
+}

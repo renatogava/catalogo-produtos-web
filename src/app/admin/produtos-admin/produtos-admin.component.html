@@ -1,14 +1,43 @@
-<button (click)="novo()">Novo Produto</button>
-<table>
-    @for (produto of produtos(); track produto.id) {
-      <tr>
-        <td><img [src]="produto.imagemUrl" [alt]="produto.nome" width="48"></td>
-        <td>{{ produto.nome }}</td>
-        <td>{{ produto.preco | currency:'BRL' }}</td>
-        <td>
-          <button (click)="editar(produto.id!)">Editar</button>
-          <button (click)="remover(produto.id!)">Remover</button>
-        </td>
-      </tr>
-    }
-</table>
+<section class="admin-products-page container">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">ADMINISTRAÇÃO</p>
+      <h1>Produtos</h1>
+      <p class="page-description">Consulte e mantenha seu catálogo atualizado.</p>
+    </div>
+    <button class="btn btn-primary add-product-button" type="button" (click)="novo()">Novo Produto <span aria-hidden="true">+</span></button>
+  </div>
+
+  <div class="products-panel">
+    <div class="table-responsive">
+      <table class="table align-middle admin-products-table">
+        <thead>
+          <tr>
+            <th scope="col">Produto</th>
+            <th scope="col">Preço</th>
+            <th scope="col" class="text-end">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (produto of produtos(); track produto.id) {
+            <tr>
+              <td>
+                <div class="admin-product-info">
+                  <img class="admin-product-image" [src]="produto.imagemUrl" [alt]="produto.nome">
+                  <span>{{ produto.nome }}</span>
+                </div>
+              </td>
+              <td class="admin-product-price">{{ produto.preco | currency:'BRL' }}</td>
+              <td>
+                <div class="product-row-actions">
+                  <button class="btn btn-sm btn-outline-light" type="button" (click)="editar(produto.id!)">Editar</button>
+                  <button class="btn btn-sm btn-outline-danger" type="button" (click)="remover(produto.id!)">Remover</button>
+                </div>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

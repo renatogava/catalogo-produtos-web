@@ -1,1 +1,20 @@
-<router-outlet />
+<div class="app-shell">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg site-navbar" aria-label="Navegação principal">
+      <div class="container">
+        <a class="navbar-brand brand-mark" href="/" aria-label="Catálogo de produtos, início">
+          <span class="brand-icon" aria-hidden="true">C</span>
+          <span>catálogo<span class="brand-accent">.</span></span>
+        </a>
+        <div class="site-nav-links">
+          <a class="nav-link" href="/">Catálogo</a>
+          <a class="nav-link" href="/login">Entrar</a>
+          <a class="nav-link nav-link-admin" href="/admin">Administração</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="app-main">
+    <router-outlet />
+  </main>
+</div>

@@ -1,0 +1,121 @@
+.admin-dashboard {
+  max-width: 1040px;
+  padding-block: 3rem 4rem;
+}
+
+.admin-welcome {
+  margin-bottom: 2rem;
+}
+
+.admin-welcome .eyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.admin-welcome h1 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(1.8rem, 5vw, 2.7rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+}
+
+.admin-welcome > p:last-child {
+  margin: 0.7rem 0 0;
+  color: var(--text-muted);
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.dashboard-card {
+  display: flex;
+  width: min(100%, 38rem);
+  min-height: 8rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(25, 38, 53, 0.94), rgba(18, 27, 38, 0.98));
+  color: var(--text-main);
+  text-align: left;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.dashboard-card:hover,
+.dashboard-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(104, 213, 194, 0.5);
+}
+
+.dashboard-card-icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 0.9rem;
+  background: rgba(104, 213, 194, 0.12);
+  color: var(--accent);
+  font-size: 1.4rem;
+}
+
+.dashboard-card-copy {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.dashboard-card-copy strong {
+  font-size: 1rem;
+}
+
+.dashboard-card-copy span {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+.dashboard-card-arrow {
+  margin-left: auto;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.logout-button {
+  min-height: 2.75rem;
+  border-color: var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.logout-button:hover {
+  border-color: var(--border-subtle);
+  background: var(--surface-raised);
+  color: var(--text-main);
+}
+
+@media (max-width: 575.98px) {
+  .admin-dashboard {
+    padding-top: 2rem;
+  }
+
+  .dashboard-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .dashboard-card {
+    width: 100%;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .logout-button {
+    align-self: flex-start;
+  }
+}

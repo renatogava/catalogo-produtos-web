@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  color-scheme: dark;
+  --page-bg: #0b1017;
+  --surface: #121b26;
+  --surface-raised: #192635;
+  --border-subtle: rgba(182, 203, 224, 0.13);
+  --text-main: #edf4fb;
+  --text-muted: #9aabba;
+  --accent: #68d5c2;
+  --accent-strong: #31bfa6;
+}
+
+html {
+  min-width: 320px;
+  background: var(--page-bg);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 85% 0%, rgba(35, 101, 110, 0.16), transparent 35rem),
+    var(--page-bg);
+  color: var(--text-main);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}

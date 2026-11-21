@@ -1,0 +1,125 @@
+.catalog-page {
+  max-width: 1240px;
+  padding-block: 2.5rem 4rem;
+}
+
+.page-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.65rem;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.page-heading h1 {
+  max-width: 42rem;
+  margin: 0;
+  color: var(--text-main);
+  font-size: clamp(1.75rem, 5vw, 2.65rem);
+  font-weight: 750;
+  letter-spacing: -0.045em;
+  line-height: 1.12;
+}
+
+.page-description {
+  margin: 0.7rem 0 0;
+  color: var(--text-muted);
+}
+
+.catalog-count {
+  flex: 0 0 auto;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.product-card {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(25, 38, 53, 0.94), rgba(18, 27, 38, 0.98));
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(104, 213, 194, 0.42);
+}
+
+.product-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #1b2938;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 650;
+  backdrop-filter: blur(10px);
+}
+
+.available-badge {
+  background: rgba(30, 106, 90, 0.88);
+  color: #c3fff1;
+}
+
+.unavailable-badge {
+  background: rgba(54, 65, 78, 0.9);
+  color: #d7e0e8;
+}
+
+.product-card-body {
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.product-card-body h2 {
+  overflow: hidden;
+  margin: 0 0 0.6rem;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 650;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.product-price {
+  margin: 0;
+  color: var(--accent);
+  font-size: 1.15rem;
+  font-weight: 750;
+}
+
+@media (max-width: 575.98px) {
+  .catalog-page {
+    padding-top: 1.75rem;
+  }
+
+  .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

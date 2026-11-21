@@ -1,6 +1,19 @@
-<div (click)="irParaProdutos()">
-  <h1>Gestão de Produtos</h1>
-  <p>Cadastrar, editar e excluir produtos.</p>
-</div>
+<section class="admin-dashboard container">
+  <div class="admin-welcome">
+    <p class="eyebrow">PAINEL ADMINISTRATIVO</p>
+    <h1>Gestão do catálogo</h1>
+    <p>Gerencie seus produtos em um só lugar.</p>
+  </div>
 
-<button (click)="sair()">Sair</button>
+  <div class="dashboard-actions">
+    <button class="dashboard-card" type="button" (click)="irParaProdutos()">
+      <span class="dashboard-card-icon" aria-hidden="true">↗</span>
+      <span class="dashboard-card-copy">
+        <strong>Gestão de Produtos</strong>
+        <span>Cadastrar, editar e excluir produtos.</span>
+      </span>
+      <span class="dashboard-card-arrow" aria-hidden="true">→</span>
+    </button>
+    <button class="btn btn-outline-light logout-button" type="button" (click)="sair()">Sair</button>
+  </div>
+</section>

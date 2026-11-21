@@ -1,0 +1,89 @@
+.login-page {
+  display: grid;
+  min-height: calc(100vh - 4.5rem);
+  place-items: center;
+  padding-block: 2rem;
+}
+
+.login-card {
+  width: min(100%, 27rem);
+  padding: clamp(1.5rem, 6vw, 2.5rem);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1.25rem;
+  background: linear-gradient(150deg, rgba(25, 38, 53, 0.98), rgba(18, 27, 38, 0.98));
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.22);
+}
+
+.login-brand-mark {
+  display: grid;
+  width: 2.6rem;
+  height: 2.6rem;
+  margin-bottom: 1.5rem;
+  place-items: center;
+  border-radius: 0.85rem;
+  background: var(--accent);
+  color: #0b201f;
+  font-size: 1.25rem;
+  font-weight: 850;
+}
+
+.login-card .eyebrow {
+  margin-bottom: 0.5rem;
+}
+
+.login-card h1 {
+  margin: 0;
+  color: var(--text-main);
+  font-size: 1.9rem;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+}
+
+.login-description {
+  margin: 0.6rem 0 1.75rem;
+  color: var(--text-muted);
+}
+
+.login-form .form-label {
+  color: #d7e2ec;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.login-form .form-control {
+  min-height: 3rem;
+  border-color: var(--border-subtle);
+  background: rgba(8, 13, 19, 0.55);
+  color: var(--text-main);
+}
+
+.login-form .form-control:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(104, 213, 194, 0.15);
+}
+
+.login-form .form-control::placeholder {
+  color: #718394;
+}
+
+.login-error {
+  padding: 0.7rem 0.85rem;
+  font-size: 0.88rem;
+}
+
+.login-submit {
+  width: 100%;
+  min-height: 3rem;
+  margin-top: 0.25rem;
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #09201e;
+  font-weight: 750;
+}
+
+.login-submit:hover,
+.login-submit:focus-visible {
+  border-color: var(--accent-strong);
+  background: var(--accent-strong);
+  color: #09201e;
+}

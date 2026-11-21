@@ -1,12 +1,31 @@
-@for (produto of produtos(); track produto.id) {
-    <div>
-        <img [src]="produto.imagemUrl" [alt]="produto.nome">
-        <h2>{{ produto.nome }}</h2>
-        <p>{{ produto.preco | currency:'BRL' }}</p>
-        @if (produto.disponivel) {
-            <span>Disponível</span>
-        } @else {
-            <span>Esgotado</span>
+<section class="catalog-page container">
+    <div class="page-heading">
+        <div>
+            <p class="eyebrow">SELEÇÃO DA CASA</p>
+            <h1>Produtos para o seu dia a dia</h1>
+            <p class="page-description">Explore nosso catálogo e encontre seu próximo favorito.</p>
+        </div>
+        <span class="catalog-count">{{ produtos().length }} produtos</span>
+    </div>
+
+    <div class="row g-3 g-lg-4">
+        @for (produto of produtos(); track produto.id) {
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                <article class="product-card h-100">
+                    <div class="product-image-wrap">
+                        <img class="product-image" [src]="produto.imagemUrl" [alt]="produto.nome">
+                        @if (produto.disponivel) {
+                            <span class="badge product-badge available-badge">Disponível</span>
+                        } @else {
+                            <span class="badge product-badge unavailable-badge">Esgotado</span>
+                        }
+                    </div>
+                    <div class="product-card-body">
+                        <h2>{{ produto.nome }}</h2>
+                        <p class="product-price">{{ produto.preco | currency:'BRL' }}</p>
+                    </div>
+                </article>
+            </div>
         }
     </div>
-}
+</section>
