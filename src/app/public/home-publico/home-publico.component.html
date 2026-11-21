@@ -1,0 +1,12 @@
+@for (produto of produtos(); track produto.id) {
+    <div>
+        <img [src]="produto.imagemUrl" [alt]="produto.nome">
+        <h2>{{ produto.nome }}</h2>
+        <p>{{ produto.preco | currency:'BRL' }}</p>
+        @if (produto.disponivel) {
+            <span>Disponível</span>
+        } @else {
+            <span>Esgotado</span>
+        }
+    </div>
+}
